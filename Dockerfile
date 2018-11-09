@@ -24,6 +24,7 @@ ENV CHROME_BIN /usr/bin/google-chrome
 
 ADD bin/ /root/bin/
 ADD bash.bashrc /etc/bash.bashrc
+ADD mock-backend/ /mock-backend
 
 ENV CEPH_ROOT /ceph
 ENV BUILD_DIR /ceph/build
