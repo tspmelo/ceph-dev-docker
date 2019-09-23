@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Copy this file to your PATH. Ensure it takes precedence and does not
+# overwrite the original `smartctl` binary. Then make it executable.
+
+URL="https://raw.githubusercontent.com/ceph/ceph/da1fbecfcfcc16917d6f3999b243bf7d553149c8/src/pybind/mgr/dashboard/frontend/src/app/ceph/cluster/osd/osd-smart-list/fixtures/smart_data_version_1_0_response.json"
+
+#curl -s $URL | jq '.["WDC_WD1003FBYX-01Y7B1_WD-WCAW11111111"]'
+# or
+if [ ! -f /tmp/smartctl.json ] ; then
+  wget $URL --quiet -O /tmp/smartctl.json
+fi
+cat /tmp/smartctl.json | jq '.["WDC_WD1003FBYX-01Y7B1_WD-WCAW11111111"]'
