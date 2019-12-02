@@ -4,6 +4,8 @@ set -e
 
 find /ceph/build/ -name "mgr.*.log" -type f -delete
 
+cat /dev/zero | ssh-keygen -q -N "" > /dev/null || true
+
 if rpm --quiet --query nfs-ganesha-ceph; then
     export GANESHA=1
 fi
