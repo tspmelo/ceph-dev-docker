@@ -11,6 +11,10 @@ docker rm $NAME
 
 # Build updated version of the image
 case "$VERSION" in
+"jenkins")
+  TAG="ceph-dev-docker-jenkins"
+  docker build -t $TAG -f jenkins/jenkins.Dockerfile .
+  ;;
 "mimic")
   TAG="ceph-dev-docker-mimic"
   docker build -t $TAG -f mimic.Dockerfile .
