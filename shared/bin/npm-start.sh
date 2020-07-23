@@ -15,4 +15,4 @@ popd
 
 cd /ceph/src/pybind/mgr/dashboard/frontend
 source /ceph/build/src/pybind/mgr/dashboard/node-env/bin/activate
-npm start -- --disableHostCheck=true
+npm start -- --disableHostCheck=true --host=192.168.1.115
