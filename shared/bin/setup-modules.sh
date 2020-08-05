@@ -10,7 +10,7 @@ bin/ceph mgr module enable prometheus
 bin/ceph dashboard set-prometheus-api-host 'http://localhost:9090'
 bin/ceph dashboard set-alertmanager-api-host 'http://localhost:9093'
 
-# SSO
+# # SSO
 cd /ceph/build
 bin/ceph config set mgr mgr/dashboard/x/ssl_server_port 443
 bin/ceph mgr module disable dashboard
